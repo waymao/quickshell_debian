@@ -1,0 +1,33 @@
+quickshell for Debian
+----------------------
+
+This is the Debian package of quickshell, a QtQuick-based desktop shell toolkit
+for Wayland and X11.
+
+Building from source
+--------------------
+
+If you need to rebuild the package with different feature flags, you can modify
+debian/rules to add CMake configuration options. See BUILD.md in the source
+tree for available options.
+
+All features are enabled by default in this package. To disable specific
+features, add the appropriate -D flags to the dh_auto_configure override
+in debian/rules.
+
+Configuration
+-------------
+
+Quickshell configuration files are typically placed in:
+  ~/.config/quickshell/
+
+See the upstream documentation at https://quickshell.outfoxxed.me for
+configuration examples and documentation.
+
+Debug Symbols
+-------------
+
+Debug symbols are provided in the quickshell-dbgsym package for crash
+reporting and debugging purposes.
+
+ -- Your Name <your.email@example.com>  Wed, 11 Dec 2024 00:00:00 +0000

@@ -1,0 +1,66 @@
+Source: quickshell
+Section: x11
+Priority: optional
+Maintainer: Your Name <your.email@example.com>
+Build-Depends: debhelper-compat (= 13),
+               cmake (>= 3.20),
+               ninja-build,
+               pkg-config,
+               qt6-base-dev (>= 6.6.0),
+               qt6-declarative-dev (>= 6.6.0),
+               qt6-declarative-private-dev (>= 6.6.0),
+               qt6-wayland-dev,
+               qt6-wayland-private-dev,
+               qt6-tools-dev,
+               qt6-shadertools-dev,
+               spirv-tools,
+               libcli11-dev,
+               libjemalloc-dev,
+               libwayland-dev,
+               wayland-protocols,
+               libdrm-dev,
+               libgbm-dev,
+               libxcb1-dev,
+               libpipewire-0.3-dev,
+               libpam0g-dev,
+               libpolkit-agent-1-dev,
+               libpolkit-gobject-1-dev,
+               libglib2.0-dev
+Standards-Version: 4.6.2
+Homepage: https://quickshell.outfoxxed.me
+Vcs-Git: https://git.outfoxxed.me/quickshell/quickshell
+Vcs-Browser: https://github.com/quickshell-mirror/quickshell
+
+Package: quickshell
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+         qt6-qpa-plugins,
+         qml6-module-qtquick,
+         qml6-module-qtquick-controls,
+         qml6-module-qtquick-window
+Recommends: qt6-svg-dev
+Description: QtQuick-based Wayland/X11 desktop shell toolkit
+ Quickshell is a simple and flexible QtQuick-based desktop shell toolkit
+ for Wayland and X11. It provides a powerful environment for creating
+ custom desktop shells, bars, panels, widgets, and other desktop
+ components using QML.
+ .
+ Features include:
+  - Wayland support (wlroots layershell, session lock, etc.)
+  - X11 support
+  - Hyprland-specific integrations
+  - i3/Sway IPC support
+  - System tray (StatusNotifier)
+  - PipeWire integration
+  - MPRIS media player control
+  - PAM authentication
+  - Polkit agent support
+  - And more
+
+Package: quickshell-dbgsym
+Architecture: any
+Section: debug
+Priority: optional
+Depends: quickshell (= ${binary:Version}), ${misc:Depends}
+Description: Debug symbols for quickshell
+ This package contains the debugging symbols for quickshell.

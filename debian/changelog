@@ -1,0 +1,10 @@
+quickshell (0.2.1-1) unstable; urgency=medium
+
+  * New upstream release 0.2.1
+  * service/tray: emit change signals for item title and description
+  * nix: update version to 0.2.1
+  * core/command: reset color after compatibility warning msg
+  * hyprland/ipc: swap windowTitle and windowClass in openwindow handler
+  * hyprland/ipc: fix activeToplevel not resetting after closewindow
+
+ -- Your Name <your.email@example.com>  Wed, 11 Dec 2024 00:00:00 +0000
